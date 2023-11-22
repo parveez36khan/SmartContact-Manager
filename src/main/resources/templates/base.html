@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="layout(content)">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title th:text="${title}">base</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" th:href="@{/css/style.css}" />
+   <style>
+  .navbar-expand-lg .navbar-nav.ml-auto {
+    margin-right: 0 !important;
+  }
+</style>
+
+  </head>
+  <body>
+	  <nav class="navbar navbar-expand-lg navbar-dark  bg-primary">
+	  <div class="container-fluid">
+	    <a class="navbar-brand" href="#">Smart contact manager</a>
+	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    
+	      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-uppercase">
+	        <li class="nav-item">
+	          <a class="nav-link active" th:href="@{/home}" aria-current="page" href="#">Home</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link active" href="#">About</a>
+	        </li>
+	       
+	        <li class="nav-item">
+	          <a class="nav-link active " th:href="@{/signin}" aria-disabled="true">Login</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link active" th:href="@{/signup}" aria-disabled="true">SignUp</a>
+	        </li>
+	      </ul>
+	      <!-- <form class="d-flex" role="search">
+	        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+	        <button class="btn btn-outline-success" type="submit">Search</button>
+	      </form> -->
+	    </div>
+	  </div>
+	</nav>
+    <div th:replace="${content}"></div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <script th:src="@{/js/script.js}"></script>
+  </body>
+</html>

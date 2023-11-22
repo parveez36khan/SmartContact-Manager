@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8" />
+    <title>Dashboard Page</title>
+    <link rel="stylesheet" href="/path/to/your/css/style.css"> <!-- Link to your custom CSS file -->
+</head>
+<body>
+    <section class="banner2 d-flex justify-content-center align-items-center">
+        <div class="my-container" style="margin-left: 250px;">
+            <div class="M_card1 text-center">
+                <div class="image-container">
+                    <img class="My_profile_pic" style="height:200px;width:200px;" th:src="@{'/image/'+${user.imageUrl}}" alt="user Image" />
+                </div>
+                <div class="welcome-message">
+                    <h2>Welcome to Smart Contact Manager, <span th:text="${user.name}"></span>!</h2>
+                    <p>Smart Contact Manager is your all-in-one solution for efficient contact management. Say goodbye to scattered contact information and embrace a smarter way to organize and stay connected..</p>
+                </div>
+                <div class="action-buttons">
+                    <a class="btn btn-primary" th:href="@{/myuser/addcontact}">Add Contact</a>
+                    <a class="btn btn-secondary" th:href="@{/myuser/Show-Contact/0}">View Contact</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
