@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="base::layout(~{::section})">
 <head>
-    <meta charset="UTF-8" />
-    <title>Home Page</title>
-
+<meta charset="UTF-8" />
+<title>Home Page</title>
 <body>
-    <section class="banner d-flex justify-content-center align-items-center">
-        <div class="text-center">
-            <h1 class="font-weight-bold">Smart Contact Manager</h1>
-            <p>Start collecting your contacts in a smarter way. We provide an efficient and smarter way of handling your contacts.</p>
-            <button class="btn bg-primary btn-lg text-white">Get Started</button>
-        </div>
-       
-    </section>
+	<section
+		class="banner   ">
+		<div class="text-center ">
+		<h1 class="font-weight-bold" style="color: black;">Smart Contact Manager</h1>
+        <p style="color: black;">Start collecting your contacts in a smarter way. We provide an efficient and smarter way of handling your contacts.</p>
+		
+	
+	   <div th:style="'width: 123px; height: 34px; background: white; box-shadow: 4px 4px 1px rgba(0, 0, 0, 0.25); border-radius: 20px; text-align: center; line-height: 34px; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word; margin-left: 350px;'" class="Rectangle1">
+		    <a th:href="@{/signup}" style="text-decoration: none; text-decoration: none;color: black;">Get Started</a>
+		</div>
+		</div>
+
+	</section>
 </html>

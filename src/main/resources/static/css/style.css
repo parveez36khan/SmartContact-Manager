@@ -1,244 +1,287 @@
 body {
-    background-color: #e6e6fa; /* This is a hexadecimal color code for light purple */
+	 background-color: #E698A8;
+	/* This is a hexadecimal color code for light purple */
 }
-bg.primary{
-	background-color: #e6e6fa;
+
+.bg-khan{
+  background-color: #E698A8;
 }
+
 .banner {
-    width: 100%;
-    height: 93vh;
-    background: Linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)), url(../image/banner.jpg) center/cover;
-    background-size: cover;
-    color:White;
-    
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 93vh;
+  background: url(../image/mini2.png) center/cover;
+  background-size: cover;
+  color: white;
 }
-.banner2{
+ .Rectangle1 {
+            width: 123px;
+            height: 34px;
+            background: white;
+            box-shadow: 4px 4px 1px rgba(0, 0, 0, 0.25);
+            border-radius: 20px;
+            text-align: center;
+            line-height: 34px;
+        }
+
+        .Rectangle1 a {
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+            font-family: 'Inter';
+            font-weight: 400;
+           
+        }
+.banner .text-center {
+  text-align: left;
+  margin-right: 50px; /* Adjust the margin to create space between the content and the right edge */
+}
+/* 
+.banner h1 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.banner p {
+  margin-bottom: 20px;
+}
+
+.banner button {
+  background-color: #f563af;
+  color: white;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+ */
+
+.banner2 {
 	width: 100%;
-    height: 93vh;
-    background: url(../image/backImage.png) center/cover;
-    background-size: cover;
-    color:White;
-	
+	height: 50vh;
+	background: url(../image/) center/cover;
+	background-size: cover;
+	color: White;
 }
-.my-card{
-	padding:20px;
+
+.my-card {
+	padding: 20px;
 }
+
 @import url('https://fonts.googleapis.com/css?family=Numans');
 
-
-
 body {
-            background-color: #f8f9fa; /* Light grey background color */
-        }
+	 background-color: #E698A8;/* Light grey background color */
+}
+
 .container {
-            margin-top: 50px; /* Adjust the margin from the top */
-        }
+	margin-top: 50px; 
+	/* Adjust the margin from the top */
+	 background-color: #E698A8;
+}
 
-        .card {
-            width: 500px;
-            margin-bottom: 50px; /* Add space between the card and the next element */
-        }
-        
-		
-        .card-header {
-            background-color: #007bff; /* Bootstrap primary color for header */
-            color: #fff; /* Text color for the header */
-            text-align: center;
-            padding: 15px; /* Add padding to the header */
-        }
+.card {
+	width: 500px;
+	margin-bottom: 50px;
+	/* Add space between the card and the next element */
+}
 
-        .card-body {
-            padding: 20px;
-        }
+.card-header {
+	background-color:#ffffff; /* Bootstrap primary color for header */
+	color:black; /* Text color for the header */
+	text-align: center;
+	padding: 15px; /* Add padding to the header */
+}
 
-        .card-footer {
-            background-color: #f8f9fa; /* Light grey background color for footer */
-            padding: 15px; /* Add padding to the footer */
-        }
+.card-body {
+	padding: 20px;
+}
 
-     
-        
+.card-footer {
+	background-color: #f8f9fa; /* Light grey background color for footer */
+	padding: 15px; /* Add padding to the footer */
+}
 
-        .form-group {
-            margin-bottom: 20px; /* Add space between form groups */
-        }
-
-        .remember {
-            margin-top: 10px; /* Add space above the Remember Me checkbox */
-        }
-
-        .login_btn {
-            color: #fff;
-            background-color: #007bff; /* Bootstrap primary color for login button */
-            border-radius: 5px;
-        }
-
-        .login_btn:hover {
-            color: #fff;
-            background-color: #0056b3; /* Darker color on hover */
-        }
-
-        .links a {
-            color: #007bff; /* Bootstrap primary color for links */
-        }
-
-        .links a:hover {
-            color: #0056b3; /* Darker color on hover */
-        }
-        
+.form-group {
+	margin-bottom: 20px; /* Add space between form groups */
+}
 
 .remember {
-    margin-top: 10px;
-    margin-bottom: 10px; /* Add some space below the checkbox and label */
+	margin-top: 10px; /* Add space above the Remember Me checkbox */
+}
+
+.login_btn {
+	color: #fff;
+	background-color: #007bff;
+	/* Bootstrap primary color for login button */
+	border-radius: 5px;
+}
+
+.login_btn:hover {
+	color: #fff;
+	background-color: #0056b3; /* Darker color on hover */
+}
+
+.links a {
+	color: #007bff; /* Bootstrap primary color for links */
+}
+
+.links a:hover {
+	color: #0056b3; /* Darker color on hover */
+}
+
+.remember {
+	margin-top: 10px;
+	margin-bottom: 10px; /* Add some space below the checkbox and label */
 }
 
 .remember input {
-    margin-right: 5px;
+	margin-right: 5px;
 }
 
 .remember label {
-    font-size: 14px;
-    color: #555;
+	font-size: 14px;
+	color: #555;
 }
+
 .navbar {
-            z-index: 1000;
-        }
-/* sidebar */
- .sidebar {
-            height: 100%;
-            width: 250px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            background-color: #111;
-            padding-top: 60px; /* Adjusted to avoid overlapping with the navbar */
-            padding-left: 10px;
-            color: white;
-            z-index: 900; /* Ensure sidebar is behind navbar */
-        }
-
-       .sidebar a {
-        display: flex;
-        align-items: center; /* Align icon and text vertically */
-        padding: 10px;
-        text-decoration: none;
-        font-size: 18px;
-        color: white;
-    }
-
-    .sidebar a i {
-        margin-right: 12px; /* Add space between icon and text */
-        font-size: 24px; /* Adjust icon size as needed */
-    }
-
-        .content {
-            margin-left: 220px;
-            padding: 50px;
-            padding-left: 30px;
-          
-            
-        }
-        
-@media only screen and (max-width:600px) {
-    .sidebar {
-        display: none;
-    }
-
-    .sidebar a {
-        display: flex;
-        align-items: center; /* Align icon and text vertically */
-        padding: 10px;
-        text-decoration: none;
-        font-size: 18px;
-        color: white;
-    }
-
-    .sidebar a i {
-        margin-right: 12px; /* Add space between icon and text */
-        font-size: 24px; /* Adjust icon size as needed */
-    }
-    .content {
-        margin-left: 0; /* Adjust based on your design */
-        padding: 20px;
-        padding-left:0;
-         /* Adjust padding based on your design */
-    }
+	z-index: 1000;
 }
-  .close-btn {
-        position: absolute;
-        top: 50px;
-        right: 0px;
-        cursor: pointer;
-        background-color:rgb(128, 0, 255); /* Temporarily add a background color for visibility */
-        padding: 5px 10px; /* Add some padding to the button */
-        border-radius: 5px; /* Add rounded corners for style */
-        z-index: 1001; /* Ensure it's above the sidebar */
-    }
+/* sidebar */
+.sidebar {
+	height: 100%;
+	width: 250px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #E698A8;
+	padding-top: 60px; /* Adjusted to avoid overlapping with the navbar */
+	padding-left: 10px;
+	color: #111;
+	z-index: 900; /* Ensure sidebar is behind navbar */
+}
 
+.sidebar a {
+	display: flex;
+	align-items: center; /* Align icon and text vertically */
+	padding: 10px;
+	text-decoration: none;
+	font-size: 18px;
+	color:#111;
+}
 
-    .close-btn i {
-        color: #fff; /* Set text color to white */
-    } 
-     .input-group-text i {
-            color: #555; /* Set a color for the icons */
-        }
+.sidebar a i {
+	margin-right: 12px; /* Add space between icon and text */
+	font-size: 24px; /* Adjust icon size as needed */
+}
+
+.content {
+	margin-left: 220px;
+	padding: 50px;
+	padding-left: 30px;
+}
+
+@media only screen and (max-width:600px) {
+	.sidebar {
+		display: none;
+	}
+	.sidebar a {
+		display: flex;
+		align-items: center; /* Align icon and text vertically */
+		padding: 10px;
+		text-decoration: none;
+		font-size: 18px;
+		color: white;
+	}
+	.sidebar a i {
+		margin-right: 12px; /* Add space between icon and text */
+		font-size: 24px; /* Adjust icon size as needed */
+	}
+	.content {
+		margin-left: 0; /* Adjust based on your design */
+		padding: 20px;
+		padding-left: 0;
+		/* Adjust padding based on your design */
+	}
+}
+
+.close-btn {
+	position: absolute;
+	top: 50px;
+	right: 0px;
+	cursor: pointer;
+	background-color: #111;
+	/* Temporarily add a background color for visibility */
+	padding: 5px 10px; /* Add some padding to the button */
+	border-radius: 5px; /* Add rounded corners for style */
+	z-index: 1001; /* Ensure it's above the sidebar */
+}
+
+.close-btn i {
+	color: #fff; /* Set text color to white */
+}
+
+.input-group-text i {
+	color: #555; /* Set a color for the icons */
+}
 /*all-css  */
 /* Style for the input group */
 /* Add these styles for the icons */
- .alert-success {
-    background-color: #d4edda; /* Green background color */
-    border-color: #c3e6cb; /* Green border color */
-    color: #155724; /* Green text color */
+.alert-success {
+	background-color: #d4edda; /* Green background color */
+	border-color: #c3e6cb; /* Green border color */
+	color: #155724; /* Green text color */
 }
 
 .alert-danger {
-    background-color: #f8d7da; /* Red background color */
-    border-color: #f5c6cb; /* Red border color */
-    color: #721c24; /* Red text color */
-}
-.My_profile_pic{
-	width:40px;
-	height:40px;
-	object-fit:cover;
-	border-radius:50%;
+	background-color: #f8d7da; /* Red background color */
+	border-color: #f5c6cb; /* Red border color */
+	color: #721c24; /* Red text color */
 }
 
-     .M_card {
-        max-width: 800px;
-        margin: 20px;
-        padding: 20px;
-        box-shadow: 0 4px 8px 0 rgba(255, 182, 193, 1);
-    }
+.My_profile_pic {
+	width: 40px;
+	height: 40px;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+.M_card {
+	max-width: 800px;
+	margin: 20px;
+	padding: 20px;
+	box-shadow: 0 4px 8px 0 rgba(255, 182, 193, 1);
+}
+
 .M_card1 {
-    max-width: 800px;
-    margin: 20px;
-    padding: 20px;
-    box-shadow: 0 4px 8px 0 rgba(255, 182, 193, 369);
-    background-color: #8080ff; /* White background */
-    color: black;
+	max-width: 800px;
+	margin: 20px;
+	padding: 20px;
+	box-shadow: 0 4px 8px 0 rgba(255, 182, 193, 369);
+	background-color: #8080ff; /* White background */
+	color: black;
 }
 
-   
-    
+.image-container {
+	text-align: center;
+}
 
-    .image-container {
-        text-align: center;
-    }
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 20px 0;
+}
 
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 20px 0;
-       
-    }
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
 
-  
-
-    tr:nth-child(even) {
-        background-color: #f2f2f2;
-    }
-
-    th {
-        background-color: rgb(128, 0, 255);
-        color: white;
-    }
+th {
+	background-color: rgb(128, 0, 255);
+	color: white;
+}

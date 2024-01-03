@@ -1,49 +1,50 @@
 <!doctype html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="normal/base::layout(~{::section})">
 <head>
-    <meta charset="UTF-8" />
-    <title>Profile page</title>
+<meta charset="UTF-8" />
+<title>Profile page</title>
 </head>
 <body>
-    <section>
-       
-     <div class="my-container "  style="
-    margin-left: 250px;
-"> <!-- Use the new class name -->
-            <div class="M_card text-center">
-                <div class="image-container">
-                     <img class="My_profile_pic" style="height:200px;width:200px;" th:src="@{'/image/'+${user.imageUrl}}" alt="user Image" />
-                </div>
-                <table>
-                	<tr>
-                        <th>Id</th>
-                        
-                        <td th:text="${user.id}"></td>
-                    </tr>
-                    <tr>
-                        <th>Name</th>
-                        <td th:text="${user.name}"></td>
-                    </tr>
-                    
-                    <tr>
-                        <th>Email</th>
-                        <td th:text="${user.email}"></td>
-                    </tr>
-                    <tr>
-                        <th>Role</th>
-                        <td th:text="${user.role}"></td>
-                         
-                    </tr>
-                    <tr>
-                        <th>Enable</th>
-                        <td th:text="${user.enable}"></td>
-                         
-                    </tr>
-                    
-                    
-                </table>
-                 </div>
-                  </div>
-    </section>
+	<section>
+
+		<div class="my-container " style="margin-left: 250px;">
+			<!-- Use the new class name -->
+			<div class="M_card text-center">
+				<div class="image-container">
+					<img class="My_profile_pic" style="height: 200px; width: 200px;"
+						th:src="@{'/image/'+${user.imageUrl}}" alt="user Image" />
+				</div>
+				<table>
+					<tr>
+						<th>Id</th>
+
+						<td th:text="${user.id}"></td>
+					</tr>
+					<tr>
+						<th>Name</th>
+						<td th:text="${user.name}"></td>
+					</tr>
+
+					<tr>
+						<th>Email</th>
+						<td th:text="${user.email}"></td>
+					</tr>
+					<tr>
+						<th>Role</th>
+						<td th:text="${user.role}"></td>
+
+					</tr>
+					<tr>
+						<th>Enable</th>
+						<td th:text="${user.enable}"></td>
+
+					</tr>
+
+
+				</table>
+			</div>
+		</div>
+	</section>
 </body>
 </html>
