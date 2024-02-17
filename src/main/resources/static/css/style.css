@@ -3,9 +3,6 @@ body {
 	/* This is a hexadecimal color code for light purple */
 }
 
-.bg-khan{
-  background-color: #E698A8;
-}
 
 .banner {
   display: flex;
@@ -13,7 +10,28 @@ body {
   align-items: center;
   width: 100%;
   height: 93vh;
-  background: url(../image/mini2.png) center/cover;
+  background-size: cover;
+  background: url(../image/myFirstDesign.png) center/cover;
+}
+.main-css{
+	margin-left:500px;
+	font-family:Ariel;
+	font-size:21px;
+}
+.head-css{
+	font-family:Ariel;
+	font-size:60px;
+	padding:10px;
+	margin-bottom:20px;
+	
+}
+.banner3{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 93vh;
+  background: url(../image/shah1.png) center/cover;
   background-size: cover;
   color: white;
 }
@@ -75,14 +93,11 @@ body {
 
 @import url('https://fonts.googleapis.com/css?family=Numans');
 
-body {
-	 background-color: #E698A8;/* Light grey background color */
-}
-
 .container {
 	margin-top: 50px; 
 	/* Adjust the margin from the top */
-	 background-color: #E698A8;
+	
+	 	
 }
 
 .card {
