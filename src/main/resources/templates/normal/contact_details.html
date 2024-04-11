@@ -29,10 +29,11 @@
 </head>
 <body>
 	<section>
+	<div class=".M_card1" >
 		<div class="my-container " th:if=${contact}
 			style="margin-left: 250px;">
 			<!-- Use the new class name -->
-			<div class="M_card text-center">
+			<div class="M_card1 text-center">
 				<div class="image-container">
 					<img class="My_profile_pic" style="height: 200px; width: 200px;"
 						th:if="${contact.base64Image != null}"
@@ -91,6 +92,7 @@
 		</div>
 		<h2 class="text-center" th:unless=${contact}>you can't access
 			other contacts without permission</h2>
+			</div>
 	</section>
 </body>
 </html>

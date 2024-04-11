@@ -1,8 +1,18 @@
 body {
 	 background-color: #E698A8;
 	/* This is a hexadecimal color code for light purple */
+	font-family: Ariel;
+	font-size: large;
+	font: bold;
 }
-
+.navbar{
+	position:fixed;
+	top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #E698A8;
+}
 
 .banner {
   display: flex;
@@ -57,27 +67,6 @@ body {
   text-align: left;
   margin-right: 50px; /* Adjust the margin to create space between the content and the right edge */
 }
-/* 
-.banner h1 {
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.banner p {
-  margin-bottom: 20px;
-}
-
-.banner button {
-  background-color: #f563af;
-  color: white;
-  padding: 10px 20px;
-  font-size: 18px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
- */
 
 .banner2 {
 	width: 100%;
@@ -99,7 +88,9 @@ body {
 	
 	 	
 }
-
+.container2{
+	background-color: #85edf5;
+}
 .card {
 	width: 500px;
 	margin-bottom: 50px;
@@ -266,21 +257,17 @@ body {
 	border-radius: 50%;
 }
 
-.M_card {
-	max-width: 800px;
-	margin: 20px;
-	padding: 20px;
-	box-shadow: 0 4px 8px 0 rgba(255, 182, 193, 1);
-}
-
 .M_card1 {
 	max-width: 800px;
 	margin: 20px;
 	padding: 20px;
+	box-shadow: 0 4px 8px 0 rgba(255, 182, 193, 1);
 	box-shadow: 0 4px 8px 0 rgba(255, 182, 193, 369);
-	background-color: #8080ff; /* White background */
+	background-color:#85edf5; /* White background */
 	color: black;
 }
+
+
 
 .image-container {
 	text-align: center;
@@ -299,4 +286,45 @@ tr:nth-child(even) {
 th {
 	background-color: rgb(128, 0, 255);
 	color: white;
+}
+.content1 {
+    text-align: center;
+}
+.centered-card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.container3 {
+    position: relative;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.social-media {
+    margin-top: 20px;
+   
+}
+
+.social-link {
+    display: inline-block;
+    margin: 0 10px;
+}
+.logo-update{
+	border-radius: 30px;
+	background-color: transparent;
+}
+
+.social-link img {
+    width: 30px;
+    height: 30px;
+}
+img{
+	 width: 69px;
+    height: 69px;
+	border-radius: 40px;
+	
 }

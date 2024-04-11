@@ -20,33 +20,23 @@
 <body>
 	<nav class="navbar navbar-expand-lg  bg-khan">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="#">Smart contact manager</a>
-			<button class="navbar-toggler" type="button"
-				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-				aria-controls="navbarSupportedContent" aria-expanded="false"
-				aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
+			<a class="navbar-brand" th:href="@{/home}">Smart contact manager</a>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 
 				<ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-uppercase">
-					<li class="nav-item"><a class="nav-link active"
-						th:href="@{/home}" aria-current="page" href="#">Home</a></li>
-					<li class="nav-item"><a class="nav-link active" href="#">About</a>
+					<li class="nav-item">
+					<a class="nav-link active"th:href="@{/home}" aria-current="page" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link active" th:href="@{/about}"href="#">About</a>
 					</li>
 
 					<li class="nav-item"><a class="nav-link active "
 						th:href="@{/signin}" aria-disabled="true">Login</a></li>
-					
-					
 				</ul>
 				<div class="Rectangle1">
 				    <a th:href="@{/signup}">SignUp</a>
 				</div>	
-				<!-- <form class="d-flex" role="search">
-	        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-	        <button class="btn btn-outline-success" type="submit">Search</button>
-	      </form> -->
 			</div>
 		</div>
 	</nav>
