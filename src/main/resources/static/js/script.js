@@ -61,3 +61,11 @@ function confirmAndUpdate(contactId) {
         }
     });
 }
+ window.addEventListener('scroll', function() {
+        var radialLine = document.getElementById('radialLine');
+        if (window.scrollY > 0) {
+            radialLine.classList.add('transparent');
+        } else {
+            radialLine.classList.remove('transparent');
+        }
+    });

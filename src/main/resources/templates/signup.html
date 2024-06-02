@@ -21,7 +21,7 @@
 				</div>
 				<div class="card-body">
 					<form novalidate="novalidate" th:action="@{/register}"
-						method="post" th:object="${myuser}">
+						method="post"enctype="multipart/form-data" th:object="${myuser}">
 						<!-- Name Field -->
 						<div class="mb-3">
 							<label for="name" class="form-label">Name</label> <input
@@ -60,6 +60,15 @@
 							<label for="about" class="form-label">About</label>
 							<textarea class="form-control" id="about" rows="4" name="about"
 								required></textarea>
+						</div>
+						
+						<div class="mb-3">	
+									<h5 class="card-title">
+										 Image URL
+									</h5>
+									<input required type="file" class="form-control" id="image"
+										name="fileimage">
+								
 						</div>
 
 						<!-- Terms and Conditions Checkbox -->

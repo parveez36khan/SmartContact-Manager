@@ -60,16 +60,38 @@ public class UserController {
 		myUser myuser= this.userRepository.getUserbyUserName(username);
 		model.addAttribute("myuser", myuser);
 		System.out.println(myuser);
+
 		
 	}
-	@RequestMapping("/index")
-	public String dashboard(Model model ,Principal principal) {
-		model.addAttribute("title","dashboard");
-		String usernamae=principal.getName();
-		myUser user=this.userRepository.getUserbyUserName(usernamae);
-		model.addAttribute("user",user);
-		return"normal/user_dashboard";
+	@GetMapping("/index")
+	public String dashboard(Model model, Principal principal) {
+	    model.addAttribute("title", "Dashboard");
+
+	    String username = principal.getName();
+	    myUser user = this.userRepository.getUserbyUserName(username);
+	    model.addAttribute("user", user);
+
+	    // Retrieve the user's profile image
+	    String base64Image = user.getBase64Image();
+	    if (base64Image == null || base64Image.isEmpty()) {
+	        // If the user's profile image is not available, use a default image
+	        base64Image = getDefaultImageBase64(); // Implement this method to get the default image
+	    }
+	    model.addAttribute("profileImage", base64Image);
+	    if (user.getImageUrl() != null) {
+            String base64Imagee = Base64.getEncoder().encodeToString(user.getImageUrl());
+            user.setBase64Image(base64Imagee);
+        } else {
+            System.out.println("Using default image for contact with null image.");
+            // Handle the case when the image is null by setting a default image.
+            String defaultImageBase64 = getDefaultImageBase64();
+            user.setBase64Image(defaultImageBase64);
+        }
+	    // Add any other necessary data to the model
+
+	    return "normal/user_dashboard";
 	}
+
 	@GetMapping("/addcontact")
 	public String add_Contact(Model model) {
 		model.addAttribute("title","contact");
@@ -307,6 +329,15 @@ public class UserController {
     	String name=principal.getName();
     	myUser user=this.userRepository.getUserbyUserName(name);
     	m.addAttribute("user", user);
+    	if (user.getImageUrl() != null) {
+            String base64Imagee = Base64.getEncoder().encodeToString(user.getImageUrl());
+            user.setBase64Image(base64Imagee);
+        } else {
+            System.out.println("Using default image for contact with null image.");
+            // Handle the case when the image is null by setting a default image.
+            String defaultImageBase64 = getDefaultImageBase64();
+            user.setBase64Image(defaultImageBase64);
+        }
     	return "normal/profileForm";
     }
 

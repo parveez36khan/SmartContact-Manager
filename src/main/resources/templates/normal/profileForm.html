@@ -11,10 +11,18 @@
 		<div class="my-container " style="margin-left: 250px;">
 			<!-- Use the new class name -->
 			<div class="M_card1 text-center">
+			
 				<div class="image-container">
-					<img class="My_profile_pic" style="height: 200px; width: 200px;"
-						th:src="@{'/image/'+${user.imageUrl}}" alt="user Image" />
-				</div>
+					    <img style="height: 200px; width: 200px;" class="My_profile_pic" 
+				         alt="profile_pic"
+				         th:if="${user.imageUrl != null}"
+				         th:src="@{'data:image/jpeg;base64,' + ${user.base64Image}}" />
+				    <img  style="height: 200px; width: 200px;"class="My_profile_pic"
+				         alt="profile_pic"
+				         th:unless="${user.imageUrl != null}"
+				         th:src="/static/image/contact1.jpg" />
+					</div>
+				
 				<table>
 					<tr>
 						<th>Id</th>

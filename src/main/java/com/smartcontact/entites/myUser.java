@@ -1,6 +1,7 @@
 package com.smartcontact.entites;
-
+import java.util.Base64;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import jakarta.persistence.CascadeType;
@@ -10,6 +11,7 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Lob;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Email;
@@ -35,23 +37,33 @@ public class myUser {
     private String password;
 
 	private String about ;
-	private String imageUrl;
+	@Size(max = 512000, message = "Image size must not exceed 500KB")
+	@Lob
+	@Column(name = "imageUrl", columnDefinition="mediumblob")
+	private byte[] imageUrl;
 	private String role ;
 	private boolean enable;
-	
+	private String base64Image;
 	
 	public myUser() {
 		super();
 	}
 	
 	@OneToMany(cascade = CascadeType.ALL,orphanRemoval = true,mappedBy = "myuser")
-	 private List<Contact>  contacts=new ArrayList<>();
+	private List<Contact> contacts=new ArrayList<>();
 
-	public String getImageUrl() {
+	public byte[] getImageUrl() {
 		return imageUrl;
 	}
-	public void setImageUrl(String imageUrl) {
+	public void setImageUrl(byte[] imageUrl) {
 		this.imageUrl = imageUrl;
+	}
+	public String getBase64Image() {
+		return base64Image;
+	}
+
+	public void setBase64Image(String base64Image) {
+		this.base64Image = base64Image;
 	}
 	public List<Contact> getContacts() {
 		return contacts;
@@ -89,12 +101,6 @@ public class myUser {
 	public void setAbout(String about) {
 		this.about = about;
 	}
-	public String getImageurl() {
-		return imageUrl;
-	}
-	public void setImageurl(String imageurl) {
-		this.imageUrl = imageurl;
-	}
 	public String getRole() {
 		return role;
 	}
@@ -107,11 +113,14 @@ public class myUser {
 	public void setEnable(boolean enable) {
 		this.enable = enable;
 	}
-	@Override
-	public String toString() {
-		return "myUser [id=" + id + ", name=" + name + ", email=" + email + ", password=" + password + ", about="
-				+ about + ", imageUrl=" + imageUrl + ", role=" + role + ", enable=" + enable + ", contacts=" + contacts
-				+ "]";
-	}
+	 @Override
+	    public String toString() {
+	        // Convert the imageUrl byte array to a Base64 encoded string
+	        String imageUrlBase64 = imageUrl != null ? Base64.getEncoder().encodeToString(imageUrl) : "null";
+	        
+	        return "myUser [id=" + id + ", name=" + name + ", email=" + email + ", password=" + password + ", about="
+	                + about + ", imageUrl=" + imageUrlBase64 + ", role=" + role + ", enable=" + enable + ", contacts=" + contacts
+	                + "]";
+	    }
 	
 }
