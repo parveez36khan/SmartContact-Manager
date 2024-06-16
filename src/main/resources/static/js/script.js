@@ -69,3 +69,5 @@ function confirmAndUpdate(contactId) {
             radialLine.classList.remove('transparent');
         }
     });
+    
+  

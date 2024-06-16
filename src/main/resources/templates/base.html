@@ -205,7 +205,24 @@
 	<script type="module" src="https://unpkg.com/@splinetool/viewer@1.1.8/build/spline-viewer.js"></script>
 	<script th:src="@{/js/script.js}"></script>
    
-	
+	 <script>
+    document.querySelectorAll('.split-char').forEach(char => {
+      char.addEventListener('mouseover', () => {
+        char.classList.add('hovered');
+        const nextChar = char.nextElementSibling;
+        if (nextChar) {
+          nextChar.classList.add('prev-hovered');
+        }
+      });
+      char.addEventListener('mouseout', () => {
+        char.classList.remove('hovered');
+        const nextChar = char.nextElementSibling;
+        if (nextChar) {
+          nextChar.classList.remove('prev-hovered');
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>

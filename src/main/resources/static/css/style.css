@@ -361,3 +361,21 @@ img{
 	border-radius: 40px;
 	
 }
+ .bubble-text {
+      font-size: clamp(2rem, calc(2rem + 3.5vw), 8rem);
+      color: hsl(0, 0%, 50%);
+      user-select: none;
+    }
+    .split-char {
+      font-weight: 200;
+      transition: font-weight 0.5s ease;
+      display: inline-block;
+    }
+    .split-char.hovered {
+      font-weight: var(--fw-900);
+      color: var(--_clr-900);
+    }
+    .split-char.prev-hovered {
+      font-weight: var(--fw-400);
+      color: var(--clr-400);
+    }
