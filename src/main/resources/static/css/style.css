@@ -155,11 +155,16 @@ body {
 	/* Bootstrap primary color for login button */
 	border-radius: 5px;
 }
-
+.nav-item:hover{
+    border-radius:20px;
+	background-color:#fff;
+	
+}
 .login_btn:hover {
 	color: #fff;
 	background-color: #0056b3; /* Darker color on hover */
 }
+nav
 
 .links a {
 	color: #007bff; /* Bootstrap primary color for links */
