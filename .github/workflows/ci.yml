@@ -47,8 +47,12 @@ jobs:
     - name: Build with Maven
       run: mvn clean install
 
+    - name: Ensure wait-for-it.sh is executable
+      run: chmod +x ./wait-for-it.sh
+
     - name: Wait for MySQL to be ready
       run: ./wait-for-it.sh localhost:3306 --timeout=60 --strict -- echo "MySQL is up"
+
 
     - name: Run tests
       run: mvn test
@@ -61,3 +65,13 @@ jobs:
       with:
         name: smartcontact-app
         path: target/*.war
+        
+   - name: Build & push Docker image
+     uses: mr-smithers-excellent/docker-build-push@v5
+     with:
+      image: parveezkhan/smart-contact-manager 
+      tags: latest
+      registry: docker.io
+      dockerfile: Dockerfile
+      username: ${{ secrets.DOCKER_USERNAME }}
+      password: ${{ secrets.DOCKER_PASSWORD }}
